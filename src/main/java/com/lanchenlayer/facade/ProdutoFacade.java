@@ -24,6 +24,9 @@ public class ProdutoFacade {
     public Produto buscarPorId(int id) {
         return this.produtoApplication.buscarPorId(id);
     }
+    public void atualizar(int id, String descricao, float valor, String imagem) {
+        this.produtoApplication.atualizar(id,descricao, valor, imagem);
+    }
 
     public ArrayList<Produto> buscarTodos() {
         return this.produtoApplication.buscarTodos();

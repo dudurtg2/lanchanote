@@ -28,8 +28,8 @@ public class ProdutoRepository {
         produto.setDescricao(descricao);
         produto.setValor(valor);
         produto.setImagem(imagem);
-
     }
+
 
     public ArrayList<Produto> buscarTodos() {
         return produtos;

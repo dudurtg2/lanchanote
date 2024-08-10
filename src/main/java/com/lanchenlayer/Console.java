@@ -7,6 +7,7 @@ import com.lanchenlayer.repositories.ProdutoRepository;
 import com.lanchenlayer.services.ProdutoService;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Hello world!
@@ -14,6 +15,13 @@ import java.util.ArrayList;
  */
 public class Console
 {
+    public static void clearConsole() {
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
+        }
+    }
+    
+
     public static void main( String[] args )
     {
         ProdutoRepository produtoRepository = new ProdutoRepository();
@@ -25,10 +33,35 @@ public class Console
         produtoFacade.adicionar(new Produto(2, "X-Salada", 5.00f, "C:\\Users\\aluno\\imagens\\xsalada.jpg"));
 
         ArrayList<Produto> produtos = produtoFacade.buscarTodos();
+            
+       
+        
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Descrição");
-        produtos.forEach(c -> {
-            System.out.println(c.getDescricao());
-        });
+        while (true) {
+            System.out.println("Oque deseja fazer?");
+            System.out.println("1 - Mostrar todos os lanches");
+            System.out.println("2 - Comprar um lanche");
+            System.out.println("3 - Sair");
+
+            switch (input.nextInt()) {
+                case 1:
+                    System.out.println("Descrição");
+                    produtos.forEach(c -> {
+                        System.out.println(c.getDescricao());
+                    });
+                    break;
+                case 2:
+                    //vender();
+                    break;
+                case 3:
+                    System.exit(0);
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
+
 }
