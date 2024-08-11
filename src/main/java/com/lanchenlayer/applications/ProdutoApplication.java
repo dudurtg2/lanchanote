@@ -28,6 +28,10 @@ public class ProdutoApplication {
         this.produtoRepository.remover(id);
     }
 
+    public double vender(int id, int qtd) {
+        return this.produtoService.vender(buscarPorId(id), qtd);
+    }
+
     public Produto buscarPorId(int id) {
         return this.produtoRepository.buscarPorId(id);
     }

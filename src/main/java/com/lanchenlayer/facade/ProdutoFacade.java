@@ -21,6 +21,10 @@ public class ProdutoFacade {
         this.produtoApplication.remover(id);
     }
 
+    public double vender(int id, int qtd) {
+        return this.produtoApplication.vender(id, qtd);
+    }
+
     public Produto buscarPorId(int id) {
         return this.produtoApplication.buscarPorId(id);
     }

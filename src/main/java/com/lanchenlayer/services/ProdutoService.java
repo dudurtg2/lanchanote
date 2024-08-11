@@ -1,5 +1,6 @@
 package com.lanchenlayer.services;
 
+import com.lanchenlayer.applications.ProdutoApplication;
 import com.lanchenlayer.entities.Produto;
 
 import java.io.File;
@@ -52,5 +53,9 @@ public class ProdutoService {
         } catch (Exception ex) {
             return false;
         }
+    }
+
+    public double vender(Produto produto, int qtd) {
+        return produto.getValor() * qtd;
     }
 }
