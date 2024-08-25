@@ -5,6 +5,8 @@ import com.lanchenlayer.entities.Produto;
 import com.lanchenlayer.facade.ProdutoFacade;
 import com.lanchenlayer.repositories.ProdutoRepository;
 import com.lanchenlayer.services.ProdutoService;
+import com.lanchenlayer.interfaces.IProdutoRepository;
+import com.lanchenlayer.interfaces.IProdutoService;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -70,8 +72,8 @@ public class Console
 
     public static void main( String[] args )
     {
-        ProdutoRepository produtoRepository = new ProdutoRepository();
-        ProdutoService produtoService = new ProdutoService();
+        IProdutoRepository produtoRepository = new ProdutoRepository();
+        IProdutoService produtoService = new ProdutoService();
         ProdutoApplication produtoApplication = new ProdutoApplication(produtoRepository, produtoService);
         ProdutoFacade produtoFacade = new ProdutoFacade(produtoApplication);
 

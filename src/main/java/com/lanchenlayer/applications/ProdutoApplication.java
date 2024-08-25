@@ -1,16 +1,17 @@
 package com.lanchenlayer.applications;
 
 import com.lanchenlayer.entities.Produto;
-import com.lanchenlayer.repositories.ProdutoRepository;
 import com.lanchenlayer.services.ProdutoService;
+import com.lanchenlayer.interfaces.IProdutoRepository;
+import com.lanchenlayer.interfaces.IProdutoService;
 
 import java.util.ArrayList;
 
 public class ProdutoApplication {
-    private ProdutoRepository produtoRepository;
-    private ProdutoService produtoService;
+    private IProdutoRepository produtoRepository;
+    private IProdutoService produtoService;
 
-    public ProdutoApplication(ProdutoRepository produtoRepository, ProdutoService produtoService) {
+    public ProdutoApplication(IProdutoRepository produtoRepository, IProdutoService produtoService) {
         this.produtoRepository = produtoRepository;
         this.produtoService = produtoService;
     }

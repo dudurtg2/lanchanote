@@ -10,9 +10,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
-public class ProdutoService implements IProdutoService{
+public class ProdutoServiceDropbox implements IProdutoService {
     private String caminhoDestino = "C:\\Users\\aluno\\LancheNLayer\\src\\main\\resources\\images\\";
-
+    
     public static String getFileExtension(String filePath) {
         String fileName = new File(filePath).getName();
         int dotIndex = fileName.lastIndexOf('.');

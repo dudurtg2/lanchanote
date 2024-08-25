@@ -4,7 +4,7 @@ import com.lanchenlayer.entities.Produto;
 import com.lanchenlayer.interfaces.IProdutoRepository;
 import java.util.ArrayList;
 
-public class ProdutoRepository implements IProdutoRepository{
+public class ProdutoRepositoryMySQL implements IProdutoRepository{
     private ArrayList<Produto> produtos = new ArrayList<Produto>();
 
     public void adicionar(Produto produto) {
